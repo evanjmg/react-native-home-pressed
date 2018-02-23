@@ -21,7 +21,7 @@ public class RNHomePressedModule extends ReactContextBaseJavaModule {
     try {
       this.reactContext
       .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-      .emit(ON_HOME_BUTTON_PRESSED, params);
+      .emit(ON_HOME_BUTTON_PRESSED);
     } catch (Exception e) {
        Log.e("sendEvent called before bundle loaded");
     }
