@@ -25,7 +25,6 @@ public class RNHomePressedModule extends ReactContextBaseJavaModule implements L
   public static final String ON_RESUME = "ON_RESUME";
   public static final String ON_PAUSE = "ON_PAUSE";
 
-  @Override
   public void onUserLeaveHint() {
     try {
      this.reactContext
@@ -47,6 +46,10 @@ public class RNHomePressedModule extends ReactContextBaseJavaModule implements L
     this.reactContext
       .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
       .emit(ON_RESUME, null);
+  }
+  @Override
+  public void onHostDestroy() {
+
   }
   @Override
   public String getName() {
