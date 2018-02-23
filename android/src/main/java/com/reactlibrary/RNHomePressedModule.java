@@ -10,7 +10,7 @@ import android.util.Log;
 public class RNHomePressedModule extends ReactContextBaseJavaModule {
 
   private final ReactApplicationContext reactContext;
-  private static final String PRESSED_ERROR = 'PRESSED_ERROR'
+  private static final String PRESSED_ERROR = "PRESSED_ERROR";
   public RNHomePressedModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
