@@ -19,10 +19,11 @@ public class RNHomePressedModule extends ReactContextBaseJavaModule {
   public static final String ON_HOME_BUTTON_PRESSED = "ON_HOME_BUTTON_PRESSED";
 
   public void onHomePressed() {
+    WritableMap params = Arguments.createMap();
     try {
       this.reactContext
       .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-      .emit(ON_HOME_BUTTON_PRESSED);
+      .emit(ON_HOME_BUTTON_PRESSED, params);
     } catch (Exception e) {
        Log.e(PRESSED_ERROR, "sendEvent called before bundle loaded");
     }
