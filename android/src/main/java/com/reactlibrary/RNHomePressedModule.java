@@ -9,6 +9,7 @@ import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.Arguments;
 import android.util.Log;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
+import android.app.Activity;
 
 public class RNHomePressedModule extends ReactContextBaseJavaModule {
 
@@ -20,10 +21,10 @@ public class RNHomePressedModule extends ReactContextBaseJavaModule {
   }
   public static final String ON_HOME_BUTTON_PRESSED = "ON_HOME_BUTTON_PRESSED";
 
-  public void onHomePressed() {
+  public static void onHomePressed(Activity reactActivity) {
     WritableMap params = Arguments.createMap();
     try {
-      this.reactContext
+      reactActivity.getApplicationContext()
       .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
       .emit(ON_HOME_BUTTON_PRESSED, params);
     } catch (Exception e) {
