@@ -17,10 +17,9 @@ public class RNHomePressedModule extends ReactContextBaseJavaModule {
 
   public static final String ON_HOME_BUTTON_PRESSED = "ON_HOME_BUTTON_PRESSED";
 
-  public void onHomePressed(ReactContext reactContext,
-                       @Nullable WritableMap params) {
+  public void onHomePressed() {
     try {
-      reactContext
+      this.reactContext
       .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
       .emit(ON_HOME_BUTTON_PRESSED, params);
     } catch (Exception e) {
