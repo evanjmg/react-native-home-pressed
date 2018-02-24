@@ -3,14 +3,9 @@ package com.evanjmg;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
-import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
-import com.facebook.react.bridge.WritableMap;
-import com.facebook.react.bridge.Arguments;
-import com.facebook.react.bridge.ActivityEventListener;
 import android.util.Log;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
-import android.app.Activity;
 
 public class RNHomePressedModule extends ReactContextBaseJavaModule {
   private final HomeWatcher mHomeWatcher;
@@ -28,16 +23,14 @@ public class RNHomePressedModule extends ReactContextBaseJavaModule {
           RNHomePressedModule.sendEvent(rcontext, RNHomePressedModule.ON_HOME_BUTTON_PRESSED);
         }
         @Override
-        public void onHomeLongPressed() {
-          RNHomePressedModule.sendEvent(rcontext, RNHomePressedModule.ON_HOME_BUTTON_LONG_PRESSED);
+        public void onRecentAppPressed() {
+          RNHomePressedModule.sendEvent(rcontext, RNHomePressedModule.ON_RECENT_APP_BUTTON_PRESSED);
         }
     });
     this.mHomeWatcher.startWatch();
   }
   public static final String ON_HOME_BUTTON_PRESSED = "ON_HOME_BUTTON_PRESSED";
-  public static final String ON_HOME_BUTTON_LONG_PRESSED = "ON_HOME_BUTTON_LONG_PRESSED";
-  public static final String ON_RESUME = "ON_RESUME";
-  public static final String ON_PAUSE = "ON_PAUSE";
+  public static final String ON_RECENT_APP_BUTTON_PRESSED = "ON_RECENT_APP_BUTTON_PRESSED";
 
   public static void sendEvent(ReactApplicationContext reactContext, String eventName) {
     try {

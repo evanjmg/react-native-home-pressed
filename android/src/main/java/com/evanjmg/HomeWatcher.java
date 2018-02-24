@@ -53,7 +53,7 @@ public class HomeWatcher {
                         if (reason.equals(SYSTEM_DIALOG_REASON_HOME_KEY)) {
                             mListener.onHomePressed();
                         } else if (reason.equals(SYSTEM_DIALOG_REASON_RECENT_APPS)) {
-                            mListener.onHomeLongPressed();
+                            mListener.onRecentAppPressed();
                         }
                     }
                 }
