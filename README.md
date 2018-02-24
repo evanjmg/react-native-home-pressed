@@ -29,7 +29,7 @@
     ```
 ## Events
 - 'ON_HOME_BUTTON_PRESSED'
-- 'ON_HOME_BUTTON_LONG_PRESSED'
+- 'ON_RECENT_APP_BUTTON_PRESSED' - that button that lists your apps
 
 ## Usage
 ```javascript
