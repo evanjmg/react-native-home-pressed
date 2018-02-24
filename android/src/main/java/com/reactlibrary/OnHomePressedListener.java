@@ -1,4 +1,4 @@
-package com.reactlibrary;
+package com.evanjmg;
 
 public interface OnHomePressedListener {
     public void onHomePressed();
