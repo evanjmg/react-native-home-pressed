@@ -20,15 +20,16 @@ public class RNHomePressedModule extends ReactContextBaseJavaModule {
     super(reactContext);
     this.mHomeWatcher = new HomeWatcher(reactContext);
     this.reactContext = reactContext;
-
+    final ReactApplicationContext rcontext
+    rcontext = reactContext
     this.mHomeWatcher.setOnHomePressedListener(new OnHomePressedListener() {
         @Override
         public void onHomePressed() {
-          RNHomePressedModule.sendEvent(this.reactContext, RNHomePressedModule.ON_HOME_BUTTON_PRESSED);
+          RNHomePressedModule.sendEvent(rcontext, RNHomePressedModule.ON_HOME_BUTTON_PRESSED);
         }
         @Override
         public void onHomeLongPressed() {
-          RNHomePressedModule.sendEvent(this.reactContext, RNHomePressedModule.ON_HOME_BUTTON_LONG_PRESSED);
+          RNHomePressedModule.sendEvent(rcontext, RNHomePressedModule.ON_HOME_BUTTON_LONG_PRESSED);
         }
     });
     this.mHomeWatcher.startWatch();
