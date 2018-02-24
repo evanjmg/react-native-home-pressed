@@ -79,7 +79,7 @@ public interface OnHomePressedListener {
 }
 
 public class RNHomePressedModule extends ReactContextBaseJavaModule {
-  private final HomeWatcher mHomeWatcher
+  private final HomeWatcher mHomeWatcher;
   private final ReactApplicationContext reactContext;
   private static final String PRESSED_ERROR = "PRESSED_ERROR";
   public RNHomePressedModule(ReactApplicationContext reactContext) {
