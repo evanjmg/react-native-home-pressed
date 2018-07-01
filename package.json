@@ -8,7 +8,8 @@
     "react-native",
     "home",
     "recent app",
-    "android"
+    "android",
+    "home button"
   ],
   "repository": {
     "type": "git",
